@@ -1,10 +1,14 @@
 #! /usr/bin/perl -w
 
 ######################################################################################
+# This script takes alignment sequence fasta file and converts it to phylip file
+# Date: 2007-01-29
+# Usage: perl Fasta2Phylip.pl inputFastaFile outputPhilipFile
+######################################################################################
 use strict;
 
 my $usage = "Usage: perl Fasta2Phylip.pl inputFastaFile outputPhilipFile\n";
-my $infile = shift or die($usage);  # input nexus file
+my $infile = shift or die($usage);	# input nexus file
 my $outFile = shift or die($usage);	# output phylip file
 my $unixFile = $infile.".unix";
 
@@ -95,4 +99,5 @@ sub ChangetoPhylip {
 	close IN;
 	close OUT;
 }
+
 
